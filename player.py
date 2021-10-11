@@ -18,9 +18,9 @@ class Player:
 # print("Spock...")
 
 
-player1 = input("Player 1, make your move: ")
+player1 = input("Player 1, make your move: ").lower()
 print("***NO CHEATING!\n" * 20)
-player2 = input("Player 2, make your move: ")
+player2 = input("Player 2, make your move: ").lower()
 
 if player1 == player2:
 	print("It's a tie!")
