@@ -1,6 +1,16 @@
+from computer import Computer
+from user import User
+
+
 class Gameboard:
     def __init__(self):
+        self.player_one = None
+        self.player_two = None
+        pass
 
+    def run_game(self):
+        self.display_welcome()
+        self.choose_gametype()
         pass
 
     def display_welcome(self):
@@ -11,11 +21,13 @@ class Gameboard:
     def choose_gametype(self):
         game_type = input(
             "Please select a game type: '1' for single user or '2' for multiplayer")
-        if game_type == 1:
+        if game_type == '1':
+            self.player_one = User("Al")
+            self.player_two = Computer()
             # print('you have chosen to play against a computer)
             pass
             # set up user vs computer
-        elif game_type == 2:
+        elif game_type == '2':
             # print(you have chosen to play against another user)
             # set up user vs user
             pass
@@ -26,15 +38,13 @@ class Gameboard:
             user_input = input(
                 "Please choose your throw 'rock', 'paper', 'scissors', lizard or spock")
 
+    # def battle(self):
+    #     self.player1 = Human()
+    #     player2 = Computer()
 
-
-    def battle(self):
-        self.player1 = Human()
-        player2 = Computer()
-
-    # ->
-        self.p1_gesture = player1.choseGesture()
-        self.p2_gesture = player2.choseGesture()
+    # # ->
+    #     self.p1_gesture = player1.choseGesture()
+    #     self.p2_gesture = player2.choseGesture()
 
         # conditional check
 
