@@ -1,5 +1,6 @@
 class Gameboard:
     def __init__(self):
+
         pass
 
     def display_welcome(self):
@@ -24,3 +25,17 @@ class Gameboard:
         def display_throw_options(self):
             user_input = input(
                 "Please choose your throw 'rock', 'paper', 'scissors', lizard or spock")
+
+
+
+    def battle(self):
+        self.player1 = Human()
+        player2 = Computer()
+
+    # ->
+        self.p1_gesture = player1.choseGesture()
+        self.p2_gesture = player2.choseGesture()
+
+        # conditional check
+
+    # <-
