@@ -11,6 +11,8 @@ class Gameboard:
     def run_game(self):
         self.display_welcome()
         self.choose_gametype()
+        self.battle()
+        # self.display_throw_options()
         pass
 
     def display_welcome(self):
@@ -23,7 +25,7 @@ class Gameboard:
             "Please select a game type: '1' for single user or '2' for multiplayer")
         if game_type == '1':
             self.player_one = User("Al")
-            self.player_two = Computer()
+            self.player_two = Computer("Computer")
             # print('you have chosen to play against a computer)
             pass
             # set up user vs computer
@@ -36,20 +38,24 @@ class Gameboard:
         else:
             self.choose_gametype
 
-        def display_throw_options(self):
-            user_choice = User
-            user_choice = self.gesture_choice
+    # def display_throw_options(self):
+        
+        
+
             # user_input = input(
             #     "Please choose your throw 'rock', 'paper', 'scissors', lizard or spock")
 
-    # def battle(self):
-    #     self.player1 = Human()
-    #     player2 = Computer()
+    def battle(self):
+        # self.player1 = Human()
+        # player2 = Computer()
 
-    # # ->
-    #     self.p1_gesture = player1.choseGesture()
-    #     self.p2_gesture = player2.choseGesture()
+    # ->
+        self.p1_gesture = self.player_one.gesture_choice()
+        self.p2_gesture = self.player_two.gesture_choice()
+        print(self.p2_gesture)
+        print(self.p1_gesture)
+        
 
-        # conditional check
+    #     conditional check
 
     # <-

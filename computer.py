@@ -10,6 +10,7 @@ class Computer(Player):
 
     def gesture_choice(self):
         self.choice = random.choice(self.gestures)
+        return self.choice
         # will randomly generate choice
         # player = input("Player choose your move!").lower()
         # rand_number = randint(0, 4)
@@ -28,9 +29,11 @@ class Computer(Player):
 
         # if player == computer:
         #     print("It's a tie!")
-        # elif player == "rock":
+        # elif player one == "rock":
         #     if computer == "scissors" or computer == "lizard":
         #         print("player wins!")
+                    # self.player_one.score += 1
+                    # self.best_of_three()
         #     elif computer == "paper" or computer == "spock":
         #         print("computer wins!")
         # elif player == "paper":
