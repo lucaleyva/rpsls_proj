@@ -54,8 +54,43 @@ class Gameboard:
         self.p2_gesture = self.player_two.gesture_choice()
         print(self.p2_gesture)
         print(self.p1_gesture)
+        pass
         
 
     #     conditional check
 
-    # <-
+        if self.p1_gesture == self.p2_gesture:
+            print("It's a tie!")
+        elif self.p1_gesture == "rock":
+            if self.p2_gesture == "scissors" or self.p2_gesture == "lizard":
+                print("player wins!")
+                    # self.player_one.score += 1
+                    # self.best_of_three()
+            elif self.p2_gesture == "paper" or self.p2_gesture == "spock":
+                print("computer wins!")
+
+        elif self.p1_gesture == "paper":
+            if self.p2_gesture == "rock" or self.p2_gesture == "spock":
+                print("player wins!")
+            elif self.p2_gesture == "scissors" or self.p2_gesture == "lizard":
+                print("computer wins!")
+
+        elif self.p1_gesture == "scissors":
+            if self.p2_gesture == "paper" or self.p2_gesture == "lizard":
+                print("player wins!")
+            elif self.p2_gesture == "rock" or self.p2_gesture == "spock":
+                print("computer wins!")
+
+        elif self.p1_gesture == "lizard":
+            if self.p2_gesture == "paper" or self.p2_gesture == "spock":
+                print("player wins!")
+            elif self.p2_gesture == "rock" or self.p2_gesture == "scissors":
+                print("computer wins!")
+
+        elif self.p1_gesture == "spock":
+            if self.p2_gesture == "rock" or self.p2_gesture == "scissors":
+                print("player wins!")
+            elif self.p2_gesture == "paper" or self.p2_gesture == "lizard":
+                print("computer wins!")
+        else:
+            print("something went wrong")
