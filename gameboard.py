@@ -12,13 +12,11 @@ class Gameboard:
         self.display_welcome()
         self.choose_gametype()
         self.battle()
-        # self.display_throw_options()
         pass
 
     def display_welcome(self):
         print('Welcome to Rock, Paper, Scissors, Lizard and Spock!')
         print('The rules are the same as traditional Rock Paper Scissors but adding Lizard and Spock. Here are all the combinations: Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes, Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard')
-        # we can worry about the looks of this later
 
     def choose_gametype(self):
         game_type = input(
@@ -26,31 +24,21 @@ class Gameboard:
         if game_type == '1':
             self.player_one = User("Al")
             self.player_two = Computer("Computer")
-            # print('you have chosen to play against a computer)
             pass
-            # set up user vs computer
+
         elif game_type == '2':
             self.player_one = User("Al")
             self.player_two = User('Bob')
-            # print(you have chosen to play against another user)
-            # set up user vs user
             pass
         else:
             print("Invalid option. Please select again.")
             self.choose_gametype()
 
-    # def display_throw_options(self):
-        
-        
-
-            # user_input = input(
-            #     "Please choose your throw 'rock', 'paper', 'scissors', lizard or spock")
-
     def battle(self):
-        # self.player1 = Human()
-        # player2 = Computer()
+        # player1 = Human()
+        # player2 = Computer or human()
 
-    # ->
+        # ->
         self.p1_gesture = self.player_one.gesture_choice()
         self.p2_gesture = self.player_two.gesture_choice()
         print(self.p1_gesture)
@@ -66,7 +54,6 @@ class Gameboard:
                 print("player 1 wins!")
                 self.player_one.score += 1
                 self.best_of_three()
-                # self.best_of_three()
 
             elif self.p2_gesture == "paper" or self.p2_gesture == "spock":
                 print("player 2 wins!")
@@ -115,11 +102,10 @@ class Gameboard:
     def best_of_three(self):
         if self.player_one.score == 2:
             print("Player 1 wins best of 3!")
-            # print()
+
         elif self.player_two.score == 2:
             print("Player 2 wins best of 3!")
-            # print()
+
         else:
             print("Next round!")
-            # print()
             self.battle()

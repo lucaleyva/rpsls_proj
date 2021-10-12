@@ -9,12 +9,12 @@ class User(Player):
 
     def gesture_choice(self):
         is_valid_input = False
-        
+
         while is_valid_input != True:
 
-            choice = input("Please choose your throw '0' for rock, '1' for paper, '2' for scissors, '3' for lizard, '4' for spock.")
-            # player = input("Player choose your move!").lower()
-            
+            choice = input(
+                "Please choose your throw '0' for rock, '1' for paper, '2' for scissors, '3' for lizard, '4' for spock.")
+
             if choice == "0":
                 self.choice = "rock"
                 is_valid_input = True
@@ -38,16 +38,7 @@ class User(Player):
             else:
                 print("Invalid choice. Please select again.")
         return self.choice
-        
 
-        # else:
-        #     print("Invalid option. Please select again.")
-        #     self.gesture_choice()
-        
 
-        
 # user will input which gesture they want
 # validate user input or reprompt user if invalid
-
-
-# player = input("Player choose your move!").lower()
