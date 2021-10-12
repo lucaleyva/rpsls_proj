@@ -36,7 +36,8 @@ class Gameboard:
             # set up user vs user
             pass
         else:
-            self.choose_gametype
+            print("Invalid option. Please select again.")
+            self.choose_gametype()
 
     # def display_throw_options(self):
         
@@ -52,54 +53,73 @@ class Gameboard:
     # ->
         self.p1_gesture = self.player_one.gesture_choice()
         self.p2_gesture = self.player_two.gesture_choice()
-        print(self.p2_gesture)
         print(self.p1_gesture)
+        print(self.p2_gesture)
         pass
-        
-
     #     conditional check
 
         if self.p1_gesture == self.p2_gesture:
             print("It's a tie!")
+            self.best_of_three()
         elif self.p1_gesture == "rock":
             if self.p2_gesture == "scissors" or self.p2_gesture == "lizard":
                 print("player 1 wins!")
                 self.player_one.score += 1
+                self.best_of_three()
                 # self.best_of_three()
 
             elif self.p2_gesture == "paper" or self.p2_gesture == "spock":
                 print("player 2 wins!")
                 self.player_two.score += 1
+                self.best_of_three()
         elif self.p1_gesture == "paper":
             if self.p2_gesture == "rock" or self.p2_gesture == "spock":
                 print("player 1 wins!")
                 self.player_one.score += 1
+                self.best_of_three()
             elif self.p2_gesture == "scissors" or self.p2_gesture == "lizard":
                 print("player 2 wins!")
                 self.player_two.score += 1
+                self.best_of_three()
 
         elif self.p1_gesture == "scissors":
             if self.p2_gesture == "paper" or self.p2_gesture == "lizard":
                 print("player 1 wins!")
                 self.player_one.score += 1
+                self.best_of_three()
             elif self.p2_gesture == "rock" or self.p2_gesture == "spock":
                 print("player 2 wins!")
                 self.player_two.score += 1
+                self.best_of_three()
 
         elif self.p1_gesture == "lizard":
             if self.p2_gesture == "paper" or self.p2_gesture == "spock":
                 print("player 1 wins!")
                 self.player_one.score += 1
+                self.best_of_three()
             elif self.p2_gesture == "rock" or self.p2_gesture == "scissors":
                 print("player 2 wins!")
                 self.player_two.score += 1
+                self.best_of_three()
 
         elif self.p1_gesture == "spock":
             if self.p2_gesture == "rock" or self.p2_gesture == "scissors":
                 print("player 1 wins!")
                 self.player_one.score += 1
+                self.best_of_three()
             elif self.p2_gesture == "paper" or self.p2_gesture == "lizard":
                 print("player 2 wins!")
                 self.player_two.score += 1
+                self.best_of_three()
+
+    def best_of_three(self):
+        if self.player_one.score == 2:
+            print("Player 1 wins best of 3!")
+            # print()
+        elif self.player_two.score == 2:
+            print("Player 2 wins best of 3!")
+            # print()
         else:
-            print("something went wrong")
+            print("Next round!")
+            # print()
+            self.battle()
