@@ -63,34 +63,43 @@ class Gameboard:
             print("It's a tie!")
         elif self.p1_gesture == "rock":
             if self.p2_gesture == "scissors" or self.p2_gesture == "lizard":
-                print("player wins!")
-                    # self.player_one.score += 1
-                    # self.best_of_three()
-            elif self.p2_gesture == "paper" or self.p2_gesture == "spock":
-                print("computer wins!")
+                print("player 1 wins!")
+                self.player_one.score += 1
+                # self.best_of_three()
 
+            elif self.p2_gesture == "paper" or self.p2_gesture == "spock":
+                print("player 2 wins!")
+                self.player_two.score += 1
         elif self.p1_gesture == "paper":
             if self.p2_gesture == "rock" or self.p2_gesture == "spock":
-                print("player wins!")
+                print("player 1 wins!")
+                self.player_one.score += 1
             elif self.p2_gesture == "scissors" or self.p2_gesture == "lizard":
-                print("computer wins!")
+                print("player 2 wins!")
+                self.player_two.score += 1
 
         elif self.p1_gesture == "scissors":
             if self.p2_gesture == "paper" or self.p2_gesture == "lizard":
-                print("player wins!")
+                print("player 1 wins!")
+                self.player_one.score += 1
             elif self.p2_gesture == "rock" or self.p2_gesture == "spock":
-                print("computer wins!")
+                print("player 2 wins!")
+                self.player_two.score += 1
 
         elif self.p1_gesture == "lizard":
             if self.p2_gesture == "paper" or self.p2_gesture == "spock":
-                print("player wins!")
+                print("player 1 wins!")
+                self.player_one.score += 1
             elif self.p2_gesture == "rock" or self.p2_gesture == "scissors":
-                print("computer wins!")
+                print("player 2 wins!")
+                self.player_two.score += 1
 
         elif self.p1_gesture == "spock":
             if self.p2_gesture == "rock" or self.p2_gesture == "scissors":
-                print("player wins!")
+                print("player 1 wins!")
+                self.player_one.score += 1
             elif self.p2_gesture == "paper" or self.p2_gesture == "lizard":
-                print("computer wins!")
+                print("player 2 wins!")
+                self.player_two.score += 1
         else:
             print("something went wrong")
