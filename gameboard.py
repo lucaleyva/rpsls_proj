@@ -28,6 +28,8 @@ class Gameboard:
             pass
             # set up user vs computer
         elif game_type == '2':
+            self.player_one = User("Al")
+            self.player_two = User('Bob')
             # print(you have chosen to play against another user)
             # set up user vs user
             pass
@@ -35,8 +37,10 @@ class Gameboard:
             self.choose_gametype
 
         def display_throw_options(self):
-            user_input = input(
-                "Please choose your throw 'rock', 'paper', 'scissors', lizard or spock")
+            user_choice = User
+            user_choice = self.gesture_choice
+            # user_input = input(
+            #     "Please choose your throw 'rock', 'paper', 'scissors', lizard or spock")
 
     # def battle(self):
     #     self.player1 = Human()

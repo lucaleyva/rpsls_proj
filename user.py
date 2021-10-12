@@ -6,6 +6,10 @@ class User(Player):
 
         super().__init__(name)
         pass
+
+    def gesture_choice(self):
+        self.choice = input(self.gestures)
+
 # user will input which gesture they want
 # validate user input or reprompt user if invalid
 
